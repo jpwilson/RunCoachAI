@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "./components/ui/button";
+import { Input } from "./components/ui/input";
 import {
   CardTitle,
   CardDescription,
   CardHeader,
   CardContent,
   Card,
-} from "@/components/ui/card";
-import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar";
+} from "./components/ui/card";
+import { AvatarImage, AvatarFallback, Avatar } from "./components/ui/avatar";
 import { Rocket, Target, Zap } from "lucide-react";
 
 export default function LandingPage() {
