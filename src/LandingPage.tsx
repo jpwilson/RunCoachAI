@@ -209,7 +209,7 @@ export default function LandingPage() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 gap-10">
               Invest in Your Running Journey
             </h2>
-            <div className="flex justify-center space-x-6">
+            <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6">
               <Card className="w-full max-w-sm border-2 border-blue-600 hover:shadow-2xl transition-all hover:-translate-y-1">
                 <CardContent className="flex flex-col items-center space-y-4 p-6">
                   <Award className="h-12 w-12 text-blue-600" />
