@@ -11,6 +11,7 @@ import {
   TrendingUp,
   Award,
 } from "lucide-react";
+
 // Add this line to import your image
 import runnerImage from "../src/images/five_km_progress.png"; // Adjust the path as needed
 
@@ -122,7 +123,36 @@ export default function LandingPage() {
               Revolutionize Your Running
             </h2>
             <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
-              {/* Feature cards go here */}
+              <Card className="bg-white/50 backdrop-blur-sm border-blue-100 hover:shadow-lg transition-all hover:-translate-y-1">
+                <CardContent className="flex flex-col items-center space-y-4 p-6">
+                  <Target className="h-12 w-12 text-blue-600" />
+                  <h3 className="text-xl font-bold">Ultra-Specific Training</h3>
+                  <p className="text-gray-600 text-center">
+                    AI-powered plans that adapt daily to your progress,
+                    recovery, and goals.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white/50 backdrop-blur-sm border-blue-100 hover:shadow-lg transition-all hover:-translate-y-1">
+                <CardContent className="flex flex-col items-center space-y-4 p-6">
+                  <Zap className="h-12 w-12 text-blue-600" />
+                  <h3 className="text-xl font-bold">Real-Time Adjustments</h3>
+                  <p className="text-gray-600 text-center">
+                    Dynamic coaching that evolves with every run, ensuring
+                    optimal performance.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white/50 backdrop-blur-sm border-blue-100 hover:shadow-lg transition-all hover:-translate-y-1">
+                <CardContent className="flex flex-col items-center space-y-4 p-6">
+                  <TrendingUp className="h-12 w-12 text-blue-600" />
+                  <h3 className="text-xl font-bold">Continuous Improvement</h3>
+                  <p className="text-gray-600 text-center">
+                    Break through plateaus with advanced analytics and
+                    personalized insights.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -132,7 +162,42 @@ export default function LandingPage() {
           id="testimonials"
           className="w-full py-12 md:py-24 lg:py-32 bg-white"
         >
-          {/* Testimonials content */}
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600">
+              Hear from Our Runners
+            </h2>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  name: "Alex",
+                  achievement: "Qualified for Boston Marathon",
+                  quote: "RunCoachAI turned my impossible dream into reality.",
+                },
+                {
+                  name: "Maria",
+                  achievement: "Completed first ultra marathon",
+                  quote:
+                    "The personalized training made all the difference in my endurance.",
+                },
+                {
+                  name: "John",
+                  achievement: "Injury-free for 2 years",
+                  quote:
+                    "Smart recovery recommendations kept me running consistently.",
+                },
+              ].map((testimonial, index) => (
+                <Card key={index} className="bg-blue-50 border-blue-100">
+                  <CardContent className="p-6">
+                    <p className="text-gray-600 mb-4">"{testimonial.quote}"</p>
+                    <p className="font-bold">{testimonial.name}</p>
+                    <p className="text-sm text-blue-600">
+                      {testimonial.achievement}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
         </section>
 
         {/* Pricing Section */}
@@ -140,16 +205,137 @@ export default function LandingPage() {
           id="pricing"
           className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-blue-50 to-white"
         >
-          {/* Pricing content */}
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 gap-10">
+              Invest in Your Running Journey
+            </h2>
+            <div className="flex justify-center space-x-6">
+              <Card className="w-full max-w-sm border-2 border-blue-600 hover:shadow-2xl transition-all hover:-translate-y-1">
+                <CardContent className="flex flex-col items-center space-y-4 p-6">
+                  <Award className="h-12 w-12 text-blue-600" />
+                  <h3 className="text-2xl font-bold text-blue-600">
+                    Elite Training Plan
+                  </h3>
+                  <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600">
+                    $9.99
+                  </div>
+                  <p className="text-gray-600 text-center">
+                    Limited time offer - $24.99 after 10,000 have been purchased
+                    (8700 sold so far)
+                  </p>
+                  <ul className="space-y-2 text-sm">
+                    {[
+                      "Unlimited AI coaching",
+                      "Priority feature access",
+                      "Exclusive community access",
+                      "Personalized race strategies",
+                      "Advanced performance analytics",
+                    ].map((feature, index) => (
+                      <li key={index} className="flex items-center">
+                        <CheckCircle className="mr-2 h-5 w-5 text-green-500" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 transition-colors"
+                    onClick={handleSubmit}
+                  >
+                    Start Your Journey
+                  </Button>
+                </CardContent>
+              </Card>
+              {/* second card */}
+              <Card className="w-full max-w-sm border-2 border-blue-600 hover:shadow-2xl transition-all hover:-translate-y-1">
+                <CardContent className="flex flex-col items-center space-y-4 p-6">
+                  <Award className="h-12 w-12 text-blue-600" />
+                  <h3 className="text-2xl font-bold text-blue-600">
+                    Founder's Club
+                  </h3>
+                  <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600">
+                    $9.99/month
+                  </div>
+                  <p className="text-gray-600 text-center">
+                    Limited time offer - 67% off regular price
+                  </p>
+                  <ul className="space-y-2 text-sm">
+                    {[
+                      "Unlimited AI coaching",
+                      "Priority feature access",
+                      "Exclusive community access",
+                      "Personalized race strategies",
+                      "Advanced performance analytics",
+                    ].map((feature, index) => (
+                      <li key={index} className="flex items-center">
+                        <CheckCircle className="mr-2 h-5 w-5 text-green-500" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 transition-colors"
+                    onClick={handleSubmit}
+                  >
+                    Start Your Journey
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </section>
 
         {/* Call to Action Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-600 text-white">
           {/* CTA content */}
+          <div className="container mx-auto px-4 md:px-6 text-center">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-4">
+              Ready to Transform Your Running?
+            </h2>
+            <p className="max-w-[600px] mx-auto mb-8 text-blue-100">
+              Join thousands of runners who have already unlocked their
+              potential with RunCoachAI.
+            </p>
+            <Button
+              className="bg-white text-blue-600 hover:bg-blue-50 transition-colorsfont-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg"
+              // size="lg"
+              onClick={handleSubmit}
+            >
+              <span>Get Your Pro Training Plan</span>
+              <ChevronRight className="ml-2 h-4 w-4 inline-block" />
+            </Button>
+          </div>
         </section>
       </main>
       <footer className="w-full py-6 px-4 md:px-6 border-t border-gray-200 bg-white/80 backdrop-blur-md">
         {/* Footer content */}
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center space-x-4">
+            <Activity className="h-6 w-6 text-blue-600" />
+            <p className="text-sm text-gray-600">
+              © 2024 RunCoachAI & Run, Coach, Live LLC. All rights reserved.
+            </p>
+          </div>
+          <nav className="flex gap-4 sm:gap-6 mt-4 md:mt-0">
+            <a
+              href="#"
+              className="text-sm hover:text-blue-600 transition-colors"
+            >
+              Terms of Service
+            </a>
+            <a
+              href="#"
+              className="text-sm hover:text-blue-600 transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              className="text-sm hover:text-blue-600 transition-colors"
+            >
+              Contact Us
+            </a>
+          </nav>
+        </div>
       </footer>
     </div>
   );
