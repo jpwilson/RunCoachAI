@@ -24,6 +24,14 @@ export default function LandingPage() {
     alert("Stripe checkout would be initiated here with the email: " + email);
   };
 
+  const handleStripeRedirect = () => {
+    window.location.href = "https://buy.stripe.com/7sI4gM5ku7PadQk8ww";
+  };
+
+  const handleStripeSubscriptionRedirect = () => {
+    window.location.href = "https://buy.stripe.com/cN25kQdR02uQ5jOdQR";
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-50 text-gray-900">
       <header className="px-4 lg:px-6 h-20 flex items-center border-b border-blue-100 bg-white/80 backdrop-blur-md sticky top-0 z-50">
@@ -71,7 +79,13 @@ export default function LandingPage() {
                 injury-free.
               </p>
               <div className="w-full max-w-sm space-y-2">
-                <form onSubmit={handleSubmit} className="flex space-x-2">
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleStripeRedirect();
+                  }}
+                  className="flex space-x-2"
+                >
                   <Input
                     className="max-w-lg flex-1"
                     placeholder="Enter your email"
@@ -217,7 +231,7 @@ export default function LandingPage() {
                     Elite Training Plan
                   </h3>
                   <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600">
-                    $9.99
+                    $14.99
                   </div>
                   <p className="text-gray-600 text-center">
                     Limited time offer - $24.99 after 10,000 have been purchased
@@ -239,7 +253,7 @@ export default function LandingPage() {
                   </ul>
                   <Button
                     className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 transition-colors"
-                    onClick={handleSubmit}
+                    onClick={handleStripeRedirect}
                   >
                     Start Your Journey
                   </Button>
@@ -274,7 +288,7 @@ export default function LandingPage() {
                   </ul>
                   <Button
                     className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 transition-colors"
-                    onClick={handleSubmit}
+                    onClick={handleStripeSubscriptionRedirect}
                   >
                     Start Your Journey
                   </Button>
@@ -297,8 +311,7 @@ export default function LandingPage() {
             </p>
             <Button
               className="bg-white text-blue-600 hover:bg-blue-50 transition-colorsfont-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg"
-              // size="lg"
-              onClick={handleSubmit}
+              onClick={handleStripeRedirect}
             >
               <span>Get Your Pro Training Plan</span>
               <ChevronRight className="ml-2 h-4 w-4 inline-block" />
