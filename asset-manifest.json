@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/RunCoachAI/static/css/main.56964f62.css",
+    "main.js": "/RunCoachAI/static/js/main.aa6e3679.js",
+    "static/media/five_km_progress.png": "/RunCoachAI/static/media/five_km_progress.35526f5a4c285c191d05.png",
+    "index.html": "/RunCoachAI/index.html",
+    "main.56964f62.css.map": "/RunCoachAI/static/css/main.56964f62.css.map",
+    "main.aa6e3679.js.map": "/RunCoachAI/static/js/main.aa6e3679.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56964f62.css",
+    "static/js/main.aa6e3679.js"
+  ]
+}
