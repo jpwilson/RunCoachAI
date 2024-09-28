@@ -25,11 +25,13 @@ export default function LandingPage() {
   };
 
   const handleStripeRedirect = () => {
-    window.location.href = "https://buy.stripe.com/7sI4gM5ku7PadQk8ww";
+    window.location.href = "https://buy.stripe.com/test_8wM9CQ5Gp3tp9ck8ww";
+    // window.location.href = "https://buy.stripe.com/7sI4gM5ku7PadQk8ww"; this is the actual link, above is test link
   };
 
   const handleStripeSubscriptionRedirect = () => {
-    window.location.href = "https://buy.stripe.com/cN25kQdR02uQ5jOdQR";
+    window.location.href = "https://buy.stripe.com/test_8wM9CQ5Gp3tp9ck8ww";
+    // window.location.href = "https://buy.stripe.com/cN25kQdR02uQ5jOdQR"; this is the actual link, above is test link
   };
 
   return (
