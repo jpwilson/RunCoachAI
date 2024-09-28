@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.56964f62.css",
-    "main.js": "/static/js/main.801ec3c6.js",
+    "main.js": "/static/js/main.9250eadc.js",
     "static/media/five_km_progress.png": "/static/media/five_km_progress.35526f5a4c285c191d05.png",
     "index.html": "/index.html",
     "main.56964f62.css.map": "/static/css/main.56964f62.css.map",
-    "main.801ec3c6.js.map": "/static/js/main.801ec3c6.js.map"
+    "main.9250eadc.js.map": "/static/js/main.9250eadc.js.map"
   },
   "entrypoints": [
     "static/css/main.56964f62.css",
-    "static/js/main.801ec3c6.js"
+    "static/js/main.9250eadc.js"
   ]
 }
