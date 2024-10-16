@@ -34,7 +34,7 @@ export default function LandingPage() {
   const handleStripeSubscriptionRedirect = () => {
     window.location.href = "https://form.jotform.com/242837045598165";
     //window.location.href = "https://forms.gle/YDEZ2jNPBSHtQhSTA"; this link goes to google forms (initial iteration)
-    window.location.href = "https://forms.gle/YDEZ2jNPBSHtQhSTA";
+    //window.location.href = "https://forms.gle/YDEZ2jNPBSHtQhSTA";
     //window.location.href = "https://buy.stripe.com/test_8wM9CQ5Gp3tp9ck8ww";
     // window.location.href = "https://buy.stripe.com/cN25kQdR02uQ5jOdQR"; this is the actual link, above is test link
   };
